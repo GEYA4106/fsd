@@ -1,0 +1,18 @@
+Insert:
+db.students.insert({
+    id: 1,
+    name: "Geya",
+    age: 20
+})
+
+Find:
+db.students.find()
+
+Update:
+db.students.update(
+    { id: 1 },
+    { $set: { age: 21 } }
+)
+
+Remove:
+db.students.remove({ id: 1 })

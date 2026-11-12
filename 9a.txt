@@ -1,0 +1,17 @@
+create database:
+use college
+
+display:
+show dbs
+
+create:
+db.createCollection("students")
+
+display:
+show collections
+
+drop collection:
+db.students.drop()
+
+drop database:
+db.dropDatabase()

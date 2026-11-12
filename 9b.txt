@@ -1,0 +1,26 @@
+use college
+
+db.students.insertMany([
+    { name: "Ram", age: 20, marks: 85 },
+    { name: "Sita", age: 21, marks: 90 },
+    { name: "Geya", age: 20, marks: 95 },
+    { name: "Ravi", age: 22, marks: 75 }
+])
+
+find()
+db.students.find()
+
+limit()
+db.students.find().limit(2)
+
+sort()
+db.students.find().sort({ age: 1 })
+
+createIndex()
+db.students.createIndex({ name: 1 })
+
+aggregate()
+db.students.aggregate([
+    { $group: { _id: null, avgMarks: { $avg: "$marks" } } }
+])
+
